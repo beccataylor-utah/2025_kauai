@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Kauai Itinerary: December 15-20, 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f9fa;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 3px solid #3d7be0;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+    .map-link {
+      display: inline-block;
+      background: #3d7be0;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin: 15px 0;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .map-link:hover {
+      background: #2d5bb0;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 20px 0 30px 0;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 6px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .legend-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .natural { background: #ffbd29; }
+    .activity { background: #9f3dca; }
+    .food { background: #d24522; }
+    .lodging { background: #3d7be0; }
+    .home-base {
+      background: #e8f4f8;
+      padding: 15px;
+      border-left: 4px solid #3d7be0;
+      margin-bottom: 30px;
+      border-radius: 4px;
+    }
+    .day-section {
+      margin: 40px 0;
+      padding: 25px;
+      background: #fafbfc;
+      border-radius: 6px;
+      border-left: 4px solid #3d7be0;
+    }
+    .day-header {
+      margin-bottom: 15px;
+    }
+    .day-title {
+      font-size: 1.5em;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+    .day-theme {
+      color: #666;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    .signature-moment {
+      background: #fff3cd;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 5px;
+    }
+    .time-block {
+      margin: 20px 0;
+    }
+    .time-label {
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    li {
+      margin: 8px 0;
+    }
+    .location {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+    .location:hover {
+      background: rgba(0,0,0,0.05);
+    }
+    .location-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .note-box {
+      background: #e8f4f8;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 15px;
+      border-left: 3px solid #3d7be0;
+    }
+    .note-box strong {
+      color: #2c3e50;
+    }
+    .logistics-section {
+      background: #f0f7ff;
+      padding: 25px;
+      border-radius: 6px;
+      margin: 40px 0;
+    }
+    .logistics-section h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    .logistics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 15px;
+    }
+    .logistics-item {
+      background: white;
+      padding: 15px;
+      border-radius: 4px;
+      border-left: 3px solid #3d7be0;
+    }
+    .logistics-item h3 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      .legend {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Kauai Itinerary</h1>
+      <p><strong>December 15-20, 2025</strong></p>
+      <a href="2025_Kauai_Interactive_Map.html" class="map-link">📍 View Interactive Map</a>
+      
+      <div class="legend">
+        <div class="legend-item">
+          <span class="legend-dot natural"></span>
+          <span>Natural Attractions</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot activity"></span>
+          <span>Activities & Recreation</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot food"></span>
+          <span>Food & Drink</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot lodging"></span>
+          <span>Lodging & Towns</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-base">
+      <strong>Home Base:</strong> 
+      <a href="https://www.google.com/search?q=Marriott%27s+Kaua%27i+Beach+Club+%28Kalapaki+Beach%29" class="location" target="_blank">
+        <span class="location-dot lodging"></span>
+        <span>Marriott's Kauai Beach Club (Kalapaki Beach)</span>
+      </a>, East Shore
+    </div>
+
+    <div class="day-section">
+      <div class="day-header">
+        <h2 class="day-title">Day 1 (Sunday, Dec 15): Arrival + Sunset Recon</h2>
+        <p class="day-theme">Theme: Settle in, get oriented</p>
+      </div>
+      
+      <div class="time-block">
+        <div class="time-label">Evening (arrive 4:40pm)</div>
+        <ul>
+          <li>Check into <a href="https://www.google.com/search?q=Marriott%27s+Kaua%27i+Beach+Club+%28Kalapaki+Beach%29" class="location" target="_blank"><span class="location-dot lodging"></span><span>Marriott Beach Club</span></a>, explore Kalapaki Bay shoreline</li>
+          <li>Dinner walk in nearby harbor area (resort restaurants or local spots)</li>
+          <li>Early sleep to adjust</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-header">
+        <h2 class="day-title">Day 2 (Monday, Dec 16): North Shore Immersion</h2>
+        <p class="day-theme">Theme: Dramatic coast + surf town culture</p>
+        <div class="signature-moment">⭐ Signature moment: Sunset at Hanalei Bay pier</div>
+      </div>
+      
+      <div class="time-block">
+        <div class="time-label">Morning</div>
+        <ul>
+          <li>7:30am: Coffee at <a href="https://www.google.com/search?q=Hanalei+Bread+Co." class="location" target="_blank"><span class="location-dot food"></span><span>Hanalei Bread Co.</span></a></li>
+          <li>8:30am: <a href="https://www.google.com/search?q=K%C4%ABlauea+Point+National+Wildlife+Refuge+%28lighthouse%29" class="location" target="_blank"><span class="location-dot natural"></span><span>Kīlauea Point Lighthouse</span></a> (timed entry, book ahead, seabirds + whale spotting in season)</li>
+          <li><em>Logistics: 50min drive from hotel, arrive early for best light and bird activity</em></li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Midday</div>
+        <ul>
+          <li>Explore <a href="https://www.google.com/search?q=K%C4%ABlauea+Town" class="location" target="_blank"><span class="location-dot lodging"></span><span>Kīlauea Town</span></a> (cafes, boutiques, farmers market if open)</li>
+          <li>Lunch in town or continue to Hanalei</li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Afternoon</div>
+        <ul>
+          <li><a href="https://www.google.com/search?q=Hanalei+Town" class="location" target="_blank"><span class="location-dot lodging"></span><span>Hanalei Town</span></a> browsing (galleries, shops, food trucks on main street)</li>
+          <li>Beach time at <a href="https://www.google.com/search?q=Hanalei+Bay+%28pier+area%29" class="location" target="_blank"><span class="location-dot natural"></span><span>Hanalei Bay</span></a> (swim, paddleboard rental, or relax)</li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Evening</div>
+        <ul>
+          <li>5:30pm: Walk the pier for sunset photos (backed by waterfalls, iconic view)</li>
+          <li>Dinner in Hanalei town (walk from pier)</li>
+          <li>Return to hotel (~1hr 15min drive)</li>
+        </ul>
+      </div>
+
+      <div class="note-box">
+        <strong>Notes:</strong> North Shore is 1+ hour from hotel. <a href="https://www.google.com/search?q=Queen%27s+Bath+access+area" class="location" target="_blank"><span class="location-dot natural"></span><span>Queen's Bath</span></a> often closed in winter swell, check status if interested. Skip <a href="https://www.google.com/search?q=Na%27Pali+Coast+%28Kalalau+Trailhead+at+K%C4%93%CA%BBe+Beach%29" class="location" target="_blank"><span class="location-dot activity"></span><span>Kalalau Trail</span></a> unless you want a serious hike (requires parking reservation, 2-8 miles depending on turnaround).
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-header">
+        <h2 class="day-title">Day 3 (Tuesday, Dec 17): East Shore Adventure Day</h2>
+        <p class="day-theme">Theme: Water-based activities close to home</p>
+        <div class="signature-moment">⭐ Signature moment: Kayak to Secret Falls</div>
+      </div>
+      
+      <div class="time-block">
+        <div class="time-label">Morning</div>
+        <ul>
+          <li>7:00am: Early start for <a href="https://www.google.com/search?q=Wailua+River+kayak+%26+Secret+Falls+route" class="location" target="_blank"><span class="location-dot activity"></span><span>Wailua River kayak + Secret Falls</span></a> (self-guided or book tour, ~4-5 hours total including jungle hike)</li>
+          <li><em>Logistics: 20min from hotel, bring water shoes, dry bag, snacks. Muddy trail to waterfall.</em></li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Afternoon</div>
+        <ul>
+          <li>Late lunch in <a href="https://www.google.com/search?q=Kapa%CA%BBa+Town" class="location" target="_blank"><span class="location-dot lodging"></span><span>Kapaʻa Town</span></a> (15min from Wailua)
+            <ul>
+              <li><a href="https://www.google.com/search?q=Java+Kai+%28Kapa%CA%BBa%29" class="location" target="_blank"><span class="location-dot food"></span><span>Java Kai</span></a> for bowls/smoothies</li>
+              <li><a href="https://www.google.com/search?q=Dark+Horse+Coffee+%28Kapa%CA%BBa%29" class="location" target="_blank"><span class="location-dot food"></span><span>Dark Horse Coffee</span></a> if you want third-wave espresso</li>
+              <li><a href="https://www.google.com/search?q=Art+Cafe+Hemingway" class="location" target="_blank"><span class="location-dot food"></span><span>Art Cafe Hemingway</span></a> for cozy European vibe</li>
+            </ul>
+          </li>
+          <li>Walk or bike the Kauai Coastal Path (paved multi-use trail runs through town)</li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Evening</div>
+        <ul>
+          <li>Return to hotel, beach sunset at Kalapaki</li>
+          <li>Dinner nearby or hotel dining</li>
+        </ul>
+      </div>
+
+      <div class="note-box">
+        <strong>Alternative:</strong> Swap kayaking for <a href="https://www.google.com/search?q=Kaua%27i+Backcountry+mountain+tubing" class="location" target="_blank"><span class="location-dot activity"></span><span>Kauai Backcountry mountain tubing</span></a> (plantation canal float with tunnel headlamps, lighter activity, 3 hours, 25min from hotel).
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-header">
+        <h2 class="day-title">Day 4 (Wednesday, Dec 18): South Shore Sun + Snorkel</h2>
+        <p class="day-theme">Theme: Beaches, wildlife, coastal hikes</p>
+        <div class="signature-moment">⭐ Signature moment: Sunrise at Shipwreck Beach cliff</div>
+      </div>
+      
+      <div class="time-block">
+        <div class="time-label">Morning</div>
+        <ul>
+          <li>6:00am: Sunrise at <a href="https://www.google.com/search?q=Shipwreck+Beach+cliff+jumping+spot" class="location" target="_blank"><span class="location-dot activity"></span><span>Shipwreck Beach cliff jumping spot</span></a> (dramatic light, check surf before jumping)</li>
+          <li>7:30am: <a href="https://www.google.com/search?q=M%C4%81h%C4%81%E2%80%98ulep%C5%AB+Heritage+Trail+%28trailhead+at+Shipwreck%29" class="location" target="_blank"><span class="location-dot activity"></span><span>Māhāʻulepū Heritage Trail</span></a> (4mi round-trip coastal bluff walk, sun exposure, bring water)</li>
+          <li><em>Logistics: 35min from hotel, moderate hike</em></li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Midday</div>
+        <ul>
+          <li>Snorkel at <a href="https://www.google.com/search?q=L%C4%81wa%E2%80%98i+Beach+%28PKs+snorkeling%29" class="location" target="_blank"><span class="location-dot natural"></span><span>Lāwaʻi Beach/PKs</span></a> (shore-access reef, calm conditions best, next to Beach House restaurant)</li>
+          <li>Lunch at Beach House or nearby <a href="https://www.google.com/search?q=K%C5%8Dloa+Town" class="location" target="_blank"><span class="location-dot lodging"></span><span>Kōloa Town</span></a> (plantation-era shops + eateries)</li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Afternoon</div>
+        <ul>
+          <li><a href="https://www.google.com/search?q=Po%CA%BBip%C5%AB+Beach+Park" class="location" target="_blank"><span class="location-dot natural"></span><span>Poʻipū Beach Park</span></a> (calm swimming, turtle + monk seal sightings, keep distance)</li>
+          <li><a href="https://www.google.com/search?q=Spouting+Horn+Blowhole" class="location" target="_blank"><span class="location-dot natural"></span><span>Spouting Horn Blowhole</span></a> (quick stop, best at higher surf/incoming tide)</li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Evening</div>
+        <ul>
+          <li>Sunset from south shore (<a href="https://www.google.com/search?q=Po%CA%BBip%C5%AB" class="location" target="_blank"><span class="location-dot lodging"></span><span>Poʻipū</span></a> area has beautiful views)</li>
+          <li>Dinner in Poʻipū resort area or return to hotel (40min)</li>
+        </ul>
+      </div>
+
+      <div class="note-box">
+        <strong>Notes:</strong> South shore is sunniest/calmest in winter. All locations clustered within 15min of each other.
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-header">
+        <h2 class="day-title">Day 5 (Thursday, Dec 19): West Side Canyon + Cliffs</h2>
+        <p class="day-theme">Theme: Epic elevation and viewpoints</p>
+        <div class="signature-moment">⭐ Signature moment: Nā Pali cliffs from Kōkeʻe lookouts</div>
+      </div>
+      
+      <div class="time-block">
+        <div class="time-label">Morning</div>
+        <ul>
+          <li>7:00am: Early departure for <a href="https://www.google.com/search?q=Waimea+Canyon+Lookout" class="location" target="_blank"><span class="location-dot natural"></span><span>Waimea Canyon Lookout</span></a> (1hr 15min drive, stop for coffee in <a href="https://www.google.com/search?q=Waimea+Town" class="location" target="_blank"><span class="location-dot lodging"></span><span>Waimea Town</span></a> if needed)</li>
+          <li>Multiple pullouts and viewpoints along canyon rim road (Grand Canyon of the Pacific)</li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Midday</div>
+        <ul>
+          <li>Continue up to <a href="https://www.google.com/search?q=K%C5%8Dke%CA%BBe+State+Park+%28lookouts+area%29" class="location" target="_blank"><span class="location-dot natural"></span><span>Kōkeʻe State Park</span></a> (higher elevation rainforest, cooler temps, bring layers)</li>
+          <li>Lookouts over Nā Pali cliffs and valleys (Kalalau, Awaʻawapuhi viewpoints are stunning)</li>
+          <li>Optional short forest hikes from trailheads</li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Afternoon</div>
+        <ul>
+          <li>Descend back through Waimea, explore historic town or continue to coast</li>
+          <li>Optional: <a href="https://www.google.com/search?q=Port+Allen+Harbor+%28N%C4%81+Pali+boat+departures%29" class="location" target="_blank"><span class="location-dot activity"></span><span>Port Allen Harbor</span></a> area (if you want to book a Nā Pali boat tour for another day, this is the departure point)</li>
+          <li>Or visit <a href="https://www.google.com/search?q=Hanap%C4%93p%C4%93" class="location" target="_blank"><span class="location-dot lodging"></span><span>Hanapēpē</span></a> art town (galleries, Friday night art walk if timing works)</li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Evening</div>
+        <ul>
+          <li>Return to hotel (1hr 15min)</li>
+          <li>Relaxed dinner, early sleep after big day</li>
+        </ul>
+      </div>
+
+      <div class="note-box">
+        <strong>Notes:</strong> West side is a full-day commitment. Bring snacks/lunch or eat in Waimea. Roads are winding, drive time adds up.
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-header">
+        <h2 class="day-title">Day 6 (Friday, Dec 20): Flex Day + Departure Prep</h2>
+        <p class="day-theme">Theme: Revisit favorites or catch what you missed</p>
+        <div class="signature-moment">⭐ Flight departs 9pm</div>
+      </div>
+      
+      <div class="time-block">
+        <div class="time-label">Morning/Afternoon</div>
+        <ul>
+          <li>Sleep in or morning beach walk at Kalapaki</li>
+          <li>Options based on energy:
+            <ul>
+              <li>Revisit favorite north shore spot</li>
+              <li><a href="https://www.google.com/search?q=Anaina+Hou+Community+Park+%2F+Porter+Pavilion" class="location" target="_blank"><span class="location-dot activity"></span><span>Anaina Hou Community Park</span></a> mini-golf (light activity near Kilauea)</li>
+              <li>Local Kapaʻa shopping/cafe hopping</li>
+              <li>Pack, relax at hotel pool</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="time-block">
+        <div class="time-label">Evening</div>
+        <ul>
+          <li>6:00pm: Final dinner near airport or hotel</li>
+          <li>7:00pm: Head to airport (15min from hotel)</li>
+          <li>9:00pm: Departure</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="logistics-section">
+      <h2>Micro Logistics</h2>
+      
+      <div class="logistics-grid">
+        <div class="logistics-item">
+          <h3>Reservations needed:</h3>
+          <ul>
+            <li>Kīlauea Lighthouse (timed entry)</li>
+            <li>Kalalau Trail parking (if hiking)</li>
+            <li>Any boat tours from Port Allen</li>
+          </ul>
+        </div>
+
+        <div class="logistics-item">
+          <h3>Best conditions:</h3>
+          <ul>
+            <li>South shore snorkeling: morning before wind picks up</li>
+            <li>North shore beaches: summer is calmer, winter has big surf (check conditions)</li>
+            <li>Canyon/Kōkeʻe: go early for clearer skies before afternoon clouds</li>
+          </ul>
+        </div>
+
+        <div class="logistics-item">
+          <h3>Safety:</h3>
+          <ul>
+            <li>Queen's Bath closed in high surf (check before going)</li>
+            <li>Hanakāpīʻai Beach has dangerous currents (no swimming many days)</li>
+            <li>Keep 10+ feet from monk seals and sea turtles</li>
+          </ul>
+        </div>
+
+        <div class="logistics-item">
+          <h3>Photography:</h3>
+          <ul>
+            <li>Hanalei pier: sunset</li>
+            <li>Shipwreck Beach: sunrise</li>
+            <li>Waimea/Kōkeʻe: morning light</li>
+            <li>Spouting Horn: higher surf/incoming tide</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
